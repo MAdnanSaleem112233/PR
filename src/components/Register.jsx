@@ -1,71 +1,69 @@
 import React from "react";
-import { FaHome, FaWonSign,FaServicestack, FaPills,FaPumpMedical } from 'react-icons/fa';
+
 
 export const Register =() => {
-  
+	const [formdata, setForm] = useState({
+        fname : "",
+		lname: "",
+		email:"",
+        password:"",
+		cpassword:"",
+
+});
+const [fname, setFname] = useState ('');
+const [lname, setLname] = useState ('');
+const [email, setEmail] = useState ('');
+const [password, setPassword] = useState('');
+const [cpassword, setCpassword] = useState ('');
+    
+const handleSubmit =(e) => {
+	e.preventDefault();
+ }
      
     
     return(
         
         <>
-       <nav className="navbar2">
- <div className="navbar-logo">
-   <a href="#"><FaPumpMedical/>PRMS</a>
- </div>
- 
- <ul className="navbar-menu">
-   <li><a href="#"><FaHome/> Home</a></li>
-   <li><a href="#"><FaWonSign/> About</a></li>
-   <li><a href="#"><FaServicestack/> Services</a></li>
-   <li><a href="#"><FaPills/> Contact</a></li>
-   <button className="input3">connect wallet</button>
- </ul>
- <div className="navbar-toggle">
-   <span></span>
-   <span></span>
-   <span></span>
- </div>
-</nav>
-
+       
        	<div className="box2">
           
-		 <form autocomplete="off">
+		 <form autocomplete="off" onSubmit={handleSubmit}>
 
 			<h2>Register</h2>
 
 			<div className="inputBox">
-				<input type="text" required="required"/>
+				<input type="text" name="fname" required="required"/>
 				<span>First Name</span>
 				<i></i>
 			</div>
 
             <div className="inputBox">
-				<input type="text" required="required"/>
+				<input type="text" name="lname" required="required"/>
 				<span>Last Name</span>
 				<i></i>
 			</div>
 
             <div className="inputBox">
-				<input type="email" required="required"/>
+				<input type="email" name="email" required="required"/>
 				<span>Email</span>
 				<i></i>
 			</div>
 
 			<div className="inputBox">
-				<input type="password" required="required"/>
+				<input type="password" name="password" required="required"/>
 				<span>Password</span>
 				<i></i>
 			</div>
             
             <div className="inputBox">
-				<input type="password" required="required"/>
+				<input type="password" name="cpassword" required="required"/>
 				<span>Confirm Password</span>
 				<i></i>
 			</div>
 		<button className="input2" type="submit">Register</button>
      
 
-        <a href="patientRecord" style={{ marginLeft: "30px " }}>Have an account! Login here</a>
+        <a href="patientRecord"  style={{ marginLeft:"50px",marginTop:"20px"}}>Have an account! Login here</a>
 			
 		</form>
 	</div>
