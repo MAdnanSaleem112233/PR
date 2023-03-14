@@ -19,14 +19,15 @@ function App() {
     <BrowserRouter>
 
     <Routes>
-    <Route path="patientRecord" element={<Patient />}></Route>
-    <Route path="login" element={<Login />}></Route>
-    <Route path="register" element={<Register />}></Route>
-    <Route path="bloodPressure" element={<BP />}></Route>
-    <Route path="measureBP" element={<MPatientBP />}></Route>
-    <Route path="patientRc" element={<PatientReccord />}></Route>
-    <Route path="tb" element={<TB />}></Route>
-    <Route path="admin" element={<Admin />}></Route>
+    <Route path="/patientRecord" element={<Patient />}></Route>
+    <Route path="/login" element={<Login />}></Route>
+    <Route path="/register" element={<Register />}></Route>
+    <Route path="/bloodPressure" element={<BP />}></Route>
+    <Route path="/measureBP" element={<MPatientBP />}></Route>
+    <Route path="/patientRc" element={<PatientReccord />}></Route>
+    <Route path="/tb" element={<TB />}></Route>
+    
+    <Route exact path="/" element={<Admin />}></Route>
     </Routes>
   
     </BrowserRouter>

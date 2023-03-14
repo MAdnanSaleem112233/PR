@@ -1,27 +1,40 @@
-import React from "react";
-import {FaStethoscope,FaTable } from 'react-icons/fa';
-import logo from "../components/img/BP.png";
+import React, {useState} from "react";
 
 
-export const measureBP =() => {
-  
-    
-     
-    return(
+
+export const MeasureBP =(props) => {
+	const [formdata, setForm] = useState({
+        date: "",
+        pname: "",
+        bp: "",
+        age: "",
+        dname: "",
+});
+
+const [date, setDate] = useState ('');
+const [pname, setPname] = useState('');
+const [bp, setBp] = useState('');
+const [age, setAge] = useState('');
+const [dname, setDname] = useState('');
+
+const handleSubmit =(e) => {
+	e.preventDefault();
+ }
+
+return(
         <>
-       
         
        	<div className="bpbox"style={{backgroundColor:"#45f3ff", marginTop:"20px",marginLeft: "50px"}}>
-		<form style={{backgroundColor:"#282c34"}}>
+		<form style={{backgroundColor:"#282c34"}} onSubmit={handleSubmit}>
        
 
 			<h2  style={{marginTop:"20px"}}>Blood Pressure Report</h2>
-            <a href="">
+            
             <div className="boxbp" style={{backgroundColor:"#45f3ff", marginTop:"5px",height:"30px",border:"2px solid black"}}>
            
             <h4  style={{color:"black",marginLeft: "220px"}}>Detailed Instructions</h4>
              
-            </div></a>
+            </div>
            
             <div className="boxbp" style={{backgroundColor:"#45f3ff", marginTop:"10px",height:"200px"}}>
             <ul>
@@ -34,31 +47,31 @@ export const measureBP =() => {
             <div className="boxbp" style={{backgroundColor:"black", marginTop:"10px",height:"800px"}}>
             <div style={{marginTop:"10px",marginLeft:"150px"}}>
             <div className="inputBox">
-				<input type="Date" required="required"/>
+				<input type="Date" required="required" name="date"/>
 				<span>Date</span>
 				<i></i>
 			</div>
 
             <div className="inputBox">
-				<input type="text" required="required"/>
+				<input type="text" required="required" name="pname"/>
 				<span>Patient Name </span>
 				<i></i>
 			</div>
 
             <div className="inputBox">
-				<input type="text" required="required" />
+				<input type="text" required="required" name="bp"/>
 				<span>Blood Pressure</span>
 				<i></i>
 			</div>
 
 			<div className="inputBox">
-				<input type="number" required="required"/>
+				<input type="number" required="required" name="age"/>
 				<span>Age</span>
 				<i></i>
 			</div>
             
             <div className="inputBox">
-				<input type="text" required="required"/>
+				<input type="text" required="required" name="dname"/>
 				<span>Doctor Name</span>
 				<i></i>
 			</div>
@@ -71,4 +84,4 @@ export const measureBP =() => {
         </>
     );
 }
-export default measureBP;
+export default MeasureBP;

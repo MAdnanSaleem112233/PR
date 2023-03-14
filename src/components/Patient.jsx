@@ -1,7 +1,7 @@
 import React from "react";
 import { FaHome, FaWonSign,FaServicestack, FaPills,FaPumpMedical } from 'react-icons/fa';
 
-export const Patient =(props) => {
+export const Patient =() => {
   
      
      
@@ -19,11 +19,7 @@ export const Patient =(props) => {
    <li><a href="#"><FaPills/> Contact</a></li>
    <button className="input3">connect wallet</button>
  </ul>
- <div className="navbar-toggle">
-   <span></span>
-   <span></span>
-   <span></span>
- </div>
+ 
 </nav>
 
        	<div className="box">
